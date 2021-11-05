@@ -1,0 +1,14 @@
+Primeiros comandos do Git
+
+git init                                        >>> inicializa um repositório em branco
+git status                                      >>> verifica o status do repositório e informa sobre a área de staging
+git add <caminho_arquivo.extensão>              >>> adiciona um arquivo (ou diretório) para a área de staging. Usando . no lugar do caminho adiciona todos os arquivos
+git commit -m "comentário"                      >>> faz o commit do(s) arquivo(s) na área de staging no repositório com o comentário inserido
+git branch -M "main"				>>> renomeia a branch, a branch principal esta mudando do nome padrão "master" para o "main"
+git remote add origin <endereço HTTPS ou SSH>   >>> conecta um repositório local a um repositório remoto no servidor (usalmente github)
+                                                OBS: origin é um "apelido" dado ao repositório, é um padrão
+git push -u origin main                         >>> faz o push (envia) os arquivos para repositório remoto (utilizar -u apenas da primeira vez)
+git checkout -b "<nome da branch>"              >>> Muda de uma branch para outra, com -b cria uma noma branch com o nome selecionado
+git merge <nome da branch>                      >>> Faz um merge da branch atual com a branch selecionada
+git clone <endereço HTTPS ou SSH>               >>> Clona um repositório remoto para o seu diretório atual
+git pull					>>> Atualiza o repositório atual com a última versão do servidor

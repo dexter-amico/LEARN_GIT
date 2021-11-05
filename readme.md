@@ -25,7 +25,7 @@ Vamos criar os diretórios locais e no github e fazer a preparação dos arquivo
 
 Atualmente o Github esta usando um novo padrão para o nome da branch principal, deixando de lado *master* em prol do nome *main*. Portando é razoável passar a utilizar este nome nos novos repositórios criados.
 
-Para alterar o nome de uma branch no repositório utilizamos o seguinte comando: `git branch -M "*novo-nome*"` (**M** maiuscúlo)
+Para alterar o nome de uma branch no repositório utilizamos o seguinte comando: `git branch -M "novo-nome"` (**M** maiuscúlo)
 
 ## *Branchs* e *merging*
 
@@ -43,3 +43,34 @@ Quando as novas atualizações e funções forem consideradas prontas suas alter
 
 * Quando se desejar juntar dois ramos distintos de um projeto utiliza-se o seguinte comando para efetuar o *merge*: `git merge <branch-destino>`.
     * **ATENÇÃO:** o *merge* utiliza a *branch* atual como a fonte das alterações e a *branch* de destino como a base. Então para se alterar arquivos no *master* é preciso estar na *branch* de origem das alterações.
+
+## Trabalhando com um repositório remoto
+
+### Clonando os arquivos localmente
+
+Um repositório remoto pode ser baixado diretamente para o computador local. Caso ele esteja hospedado no Github ele precisa ser do próprio usuário, ou ser um repositório público no caso de pertencer a outro usuário.
+
+* O comando `git clone <endereço HTTP ou SSH>` clona o repositório e faz o download deste na pasta atual do *bash*.
+    * **ATENÇÃO:** não faça clones de respositório dentro de pastas que já possuem outros repositórios.
+
+Ao clonar um repositório este é baixado apenas localmente, mas não é copiado no Github, caso queira copiar o repositório para o seu repositório do Github utilize a opção *fork* no próprio Github, onde os arquivos e todo o histórico será copiado para a sua conta.
+
+### Atualizando os arquivos locais
+
+Quando uma equipe trabalha em um projeto, a versão remota pode estar mais atualizada que a versão local, neste caso é necessário atualizar os arquivos locais com a última versão dos arquivos remotos.
+
+* Estando no diretório do repositório e na branch que se quer atualizar basta usar o comando `git pull` que os arquivos locais ficarão pareados com os arquivos remotos.
+
+### Solicitando alterações nos arquivos remotos
+
+Novamente, em um projeto feito em equipe é necessário um controle das versões, por isso não é possível apenas enviar as alterações feitas localmente para o servidor, é necessário enviar uma solicitação ao administrador do projeto, isso chama-se *pull request*.
+
+A forma mais prática de se fazer um *pull request* é utilizando a interface gráfica do Github. Após alterar os arquivos localmente e enviar a versão para o servidor do Github, haverá na sua versão do repositório uma opção de fazer um *pull request*, basta clicar e seguir as instruções.
+
+## Observações finais
+
+* [Vídeo da Rafaella Ballerini explicando sobre Git e Github](https://www.youtube.com/watch?v=UBAX-13g8OM)
+* [Repositório do Github com o roteiro do vídeo](https://github.com/rafaballerini/GitTutorial)
+* [Dica de como trabalhar com dois repositórios](https://www.codegrepper.com/code-examples/shell/git+how+to+switch+to+another+repository)
+* [Como mudar o endereço do repositório remoto](https://xenovation.com/blog/source-control-management/git/how-to-change-remote-git-repository)
+* [Como atualizar, fazer um *pull*, de apenas um arquivo local](https://stackoverflow.com/questions/28375418/git-how-to-pull-a-single-file-from-a-server-repository-in-git)
