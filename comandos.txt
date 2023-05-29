@@ -11,4 +11,4 @@ git push -u origin main                         >>> faz o push (envia) os arquiv
 git checkout -b "<nome da branch>"              >>> Muda de uma branch para outra, com -b cria uma noma branch com o nome selecionado
 git merge <nome da branch>                      >>> Faz um merge da branch atual com a branch selecionada
 git clone <endereço HTTPS ou SSH>               >>> Clona um repositório remoto para o seu diretório atual
-git pull					>>> Atualiza o repositório atual com a última versão do servidor
+git pull					                    >>> Atualiza o repositório atual com a última versão do servidor
